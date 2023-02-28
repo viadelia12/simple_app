@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_app/pages/calculator.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               child: Text(
-                "Novia Adelia - 123200023",
+                "Novia Adelia (123200023)",
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 20,
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               child: Text(
-                "Afrien Khoirunnisa Shobar - 123200093",
+                "Afrien Khoirunnisa S (123200093)",
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 20,
@@ -45,21 +45,23 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(
-                  onPressed: () {
-                      Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Calculator()));
-                  },
-                  child: Text("E-Calculator", 
-                      style: TextStyle(
-                color: Color(0xfff372a01),
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline
-                      ),
-                    )
-                )
+                SizedBox(height: 100),
+                ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(primary: Color(0xfff372a01)),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Calculator()));
+                    },
+                    child: Text("E-Calculator",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        )))
               ],
-            ) 
+            )
           ],
         ),
       ),

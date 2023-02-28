@@ -19,10 +19,10 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
       body: Center(
-        child: ListView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 200),
               alignment: Alignment.center,
               child: Text(
                 "Log In",
@@ -89,8 +89,10 @@ class _LoginState extends State<Login> {
       padding: EdgeInsets.only(left: 24.0, right: 24.0),
       child: ElevatedButton(
         onPressed: () {
-          if (emailController.text == "afrienkhs@gmail.com") {
-            if (passwordController.text == "afrien") {
+          if (emailController.text == "afrienkhs@gmail.com" ||
+              emailController.text == "viadelia12@gmail.com") {
+            if (passwordController.text == "afrien" ||
+                passwordController.text == "novia") {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomePage()));
             } else {
@@ -108,7 +110,7 @@ class _LoginState extends State<Login> {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  content: Text("Username/Email Salah!"),
+                  content: Text("Email Salah!"),
                 );
               },
             );
